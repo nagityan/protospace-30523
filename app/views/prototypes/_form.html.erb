@@ -19,7 +19,14 @@
     <%= f.file_field :image %>
   </div>
 
+<div id="image-list">
+<%if @prototype.image.present?%>
+  <%=image_tag @prototype.image%>
+<% end %>
+</div>
+
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
   </div>
+  
 <% end %>
